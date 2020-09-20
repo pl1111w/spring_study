@@ -1,4 +1,4 @@
-package springxiaobo.aop.aspect;
+package pl1111w.aop.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -12,7 +12,7 @@ import java.util.List;
 @Aspect
 public class AspectLogging {
 
-    @Pointcut(value = "@annotation(springxiaobo.aop.annotations.Annotation)")
+    @Pointcut(value = "@annotation(pl1111w.aop.annotations.Annotation)")
     //@Pointcut(value = "execution(public int logging())")
     public void declareAspect() {
     }
@@ -23,6 +23,7 @@ public class AspectLogging {
         List<Object> args = Arrays.asList(joinpoint.getArgs());
         System.out.println("The method " + methodName + " before:" + args);
     }
+
     @After(value = "declareAspect()")
     public void LoggingAspectAfter(JoinPoint joinpoint) {
         String methodName = joinpoint.getSignature().getName();
@@ -30,18 +31,19 @@ public class AspectLogging {
         System.out.println("The method " + methodName + " after:" + args);
     }
 
-    @AfterReturning(value="declareAspect()",returning="result")
-    public void AfterReturning(JoinPoint joinpoint,Object result){
-        String methodName=joinpoint.getSignature().getName();
-        System.out.println("The method "+methodName+" afterReturning " +result);
+    @AfterReturning(value = "declareAspect()", returning = "result")
+    public void AfterReturning(JoinPoint joinpoint, Object result) {
+        String methodName = joinpoint.getSignature().getName();
+        System.out.println("The method " + methodName + " afterReturning " + result);
     }
 
-    @AfterThrowing(value = "declareAspect()",throwing = "error")
-    public void AfterThrowing(Throwable error){
+    @AfterThrowing(value = "declareAspect()", throwing = "error")
+    public void AfterThrowing(Throwable error) {
         System.out.println(error);
     }
+
     @Around(value = "execution(public int subLogging())")
-    public int around(ProceedingJoinPoint pjp) throws Throwable{
+    public int around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("已经记录下操作日志@Around 方法执行前");
         Object result = pjp.proceed();
         System.out.println("已经记录下操作日志@Around 方法执行后");

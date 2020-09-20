@@ -1,4 +1,4 @@
-package springxiaobo;
+package pl1111w;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

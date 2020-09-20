@@ -1,10 +1,10 @@
-package springxiaobo.aop.controller;
+package pl1111w.aop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springxiaobo.aop.annotations.Annotation;
-import springxiaobo.aop.serviveImpl.ArithmeticCalculatorServiceImpl;
+import pl1111w.aop.annotations.Annotation;
+import pl1111w.aop.serviveImpl.ArithmeticCalculatorServiceImpl;
 
 @RestController
 public class AopLogController {
