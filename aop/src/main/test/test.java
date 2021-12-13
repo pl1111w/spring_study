@@ -14,7 +14,7 @@ import java.net.Socket;
 public class test {
 
     @Test
-    public void socketReceiveFile() throws IOException {
+    public void socketTcpReceiveFile() throws IOException {
         ServerSocket serverSocket = new ServerSocket(9090);
         Socket socket = serverSocket.accept();
         InputStream inputStream = socket.getInputStream();
@@ -31,7 +31,7 @@ public class test {
     }
 
     @Test
-    public void socketSendFile() {
+    public void socketTcpSendFile() {
         Socket socket = null;
         OutputStream outputStream = null;
         FileInputStream inputStream = null;
@@ -60,4 +60,5 @@ public class test {
             }
         }
     }
+
 }
