@@ -5,7 +5,7 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-    <bean id="car" class="com.pl1111w.ioc.Car">
+    <bean id="car" class="com.pl1111w.ioc.xml.Car">
 <!--        特殊符号-->
         <property name="name" >
             <value><![CDATA[<BENZ>]]></value>
@@ -13,7 +13,7 @@
         <property name="speed" value="260"></property>
     </bean>
 <!--    构造器注入-->
-<!--    <bean id="car" class="com.pl1111w.ioc.Car">-->
+<!--    <bean id="car" class="com.pl1111w.ioc.xml.Car">-->
 <!--       <constructor-arg name="name" value="FORD"></constructor-arg>-->
 <!--       <constructor-arg name="speed" value="255"></constructor-arg>-->
 <!--    </bean>-->

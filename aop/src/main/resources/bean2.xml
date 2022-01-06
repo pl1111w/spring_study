@@ -5,18 +5,18 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-    <bean id="driver" class="com.pl1111w.ioc.Driver">
+    <bean id="driver" class="com.pl1111w.ioc.xml.Driver">
          <property name="age" value="40"></property>
          <property name="name" value="Jack"></property>
          <property name="car" ref="car">
-<!--             <bean id="car" class="com.pl1111w.ioc.Car">-->
+<!--             <bean id="car" class="com.pl1111w.ioc.xml.Car">-->
 <!--                <property name="name" value="FORD"></property>-->
 <!--                <property name="speed" value="220"></property>-->
 <!--            </bean>-->
         </property>
     </bean>
 
-    <bean id="car" class="com.pl1111w.ioc.Car">
+    <bean id="car" class="com.pl1111w.ioc.xml.Car">
         <property name="name" value="FORD"></property>
         <property name="speed" value="220"></property>
     </bean>

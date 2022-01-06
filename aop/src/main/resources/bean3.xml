@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+    <bean id="boss" class="com.pl1111w.ioc.xml.Boss">
+        <property name="name">
+            <array>
+                <value>ADD</value>
+                <value>ABC</value>
+                <value>123</value>
+            </array>
+        </property>
+        <property name="com">
+            <set>
+                <value>WES</value>
+                <value>SED</value>
+            </set>
+        </property>
+        <property name="account">
+            <map>
+                <entry key="wxb89562" value="169533.3" ></entry>
+                <entry key="wxb29562" value="169503.3" ></entry>
+                <entry key="wxb19562" value="969503.3" ></entry>
+            </map>
+        </property>
+
+        <property name="cars">
+            <list>
+                <ref bean="car1"></ref>
+                <ref bean="car2"></ref>
+            </list>
+        </property>
+    </bean>
+    <!--    构造器注入-->
+    <bean id="car1" class="com.pl1111w.ioc.xml.Car">
+        <constructor-arg name="name" value="FORD"></constructor-arg>
+        <constructor-arg name="speed" value="255"></constructor-arg>
+    </bean>
+    <bean id="car2" class="com.pl1111w.ioc.xml.Car">
+        <constructor-arg name="name" value="FERRARI"></constructor-arg>
+        <constructor-arg name="speed" value="290"></constructor-arg>
+    </bean>
+</beans>

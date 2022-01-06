@@ -1,7 +1,4 @@
-package com.pl1111w.ioc;
-
-import org.apache.catalina.core.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+package com.pl1111w.ioc.xml;
 
 /**
  * @title: pl1111w
@@ -16,7 +13,7 @@ public class MainCar {
         car.setSpeed(220);
         car.PrintMessage();
 
-        CarFactory.getCar("com.pl1111w.ioc.Car").PrintMessage();
+        CarFactory.getCar("com.pl1111w.ioc.xml.Car").PrintMessage();
 
 
     }

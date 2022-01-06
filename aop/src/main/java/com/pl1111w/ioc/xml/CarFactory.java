@@ -1,4 +1,4 @@
-package com.pl1111w.ioc;
+package com.pl1111w.ioc.xml;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

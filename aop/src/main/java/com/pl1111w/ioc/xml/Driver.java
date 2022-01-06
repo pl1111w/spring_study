@@ -1,4 +1,4 @@
-package com.pl1111w.ioc;
+package com.pl1111w.ioc.xml;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -51,7 +51,7 @@ public class Driver {
 
     public static void main(String[] args) throws ClassNotFoundException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
-        Class aClass = Class.forName("com.pl1111w.ioc.Driver");
+        Class aClass = Class.forName("com.pl1111w.ioc.xml.Driver");
         Driver driver = (Driver) context.getBean("driver",aClass);
         System.out.println(driver);
     }
