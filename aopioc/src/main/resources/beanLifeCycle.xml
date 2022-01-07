@@ -4,10 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-
+<!--    自动装备 autowire="byName"-->
     <bean id="beanLifeCycle" class="com.pl1111w.ioc.xml.BeanLifeCycleTest"
-          init-method="initMethod" destroy-method="destroyMethod">
-         <property name="name" value="666"></property>
+          init-method="initMethod" destroy-method="destroyMethod" autowire="byName">
     </bean>
     <bean id="lifeCycle" class="com.pl1111w.ioc.xml.BeanLifeCycle">
     </bean>
