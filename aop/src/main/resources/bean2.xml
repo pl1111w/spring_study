@@ -5,7 +5,8 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-    <bean id="driver" class="com.pl1111w.ioc.xml.Driver">
+    <bean id="driver" class="com.pl1111w.ioc.xml.Driver" scope="prototype">
+<!--    <bean id="driver" class="com.pl1111w.ioc.xml.Driver">-->
          <property name="age" value="40"></property>
          <property name="name" value="Jack"></property>
          <property name="car" ref="car">

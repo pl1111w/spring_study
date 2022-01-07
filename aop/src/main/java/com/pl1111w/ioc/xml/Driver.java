@@ -53,6 +53,7 @@ public class Driver {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
         Class aClass = Class.forName("com.pl1111w.ioc.xml.Driver");
         Driver driver = (Driver) context.getBean("driver",aClass);
-        System.out.println(driver);
+        Driver driver2 = (Driver) context.getBean("driver",aClass);
+        System.out.println(driver==driver2);
     }
 }
