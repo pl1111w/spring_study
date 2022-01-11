@@ -1,7 +1,7 @@
-package com.pl1111w.aop.controller;
+package com.pl1111w.aop.annotation.controller;
 
-import com.pl1111w.aop.annotations.Annotation;
-import com.pl1111w.aop.serviveImpl.ArithmeticCalculatorServiceImpl;
+import com.pl1111w.aop.annotation.annotations.Annotation;
+import com.pl1111w.aop.annotation.serviveImpl.ArithmeticCalculatorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

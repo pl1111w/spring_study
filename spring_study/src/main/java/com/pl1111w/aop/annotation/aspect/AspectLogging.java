@@ -1,4 +1,4 @@
-package com.pl1111w.aop.aspect;
+package com.pl1111w.aop.annotation.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -12,7 +12,7 @@ import java.util.List;
 @Aspect
 public class AspectLogging {
 
-    @Pointcut(value = "@annotation(com.pl1111w.aop.annotations.Annotation)")
+    @Pointcut(value = "@annotation(com.pl1111w.aop.annotation.annotations.Annotation)")
     //@Pointcut(value = "execution(public int logging())")
     public void declareAspect() {
     }

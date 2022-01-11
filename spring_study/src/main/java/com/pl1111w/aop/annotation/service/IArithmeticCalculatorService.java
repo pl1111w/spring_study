@@ -1,4 +1,4 @@
-package com.pl1111w.aop.service;
+package com.pl1111w.aop.annotation.service;
 
 public interface IArithmeticCalculatorService {
     int add(int i, int j);

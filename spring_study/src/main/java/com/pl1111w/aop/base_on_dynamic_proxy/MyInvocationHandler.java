@@ -1,4 +1,4 @@
-package com.pl1111w.aop.aopBashProxy;
+package com.pl1111w.aop.base_on_dynamic_proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
