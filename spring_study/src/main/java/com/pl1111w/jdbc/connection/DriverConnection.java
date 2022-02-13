@@ -1,7 +1,8 @@
-package com.pl1111w.jdbc;
+package com.pl1111w.jdbc.connection;
 
 import org.testng.annotations.Test;
 
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.Driver;
@@ -55,5 +56,18 @@ public class DriverConnection {
         String password = "Weixb4818";
         Connection connect = DriverManager.getConnection(url, user, password);
         System.out.println(connect);
+    }
+    @Test
+    public void testDriver4() throws Exception {
+        //通过反射获取数据库厂商实现类对象
+        Class aClass = Class.forName("com.mysql.jdbc.Driver");
+        Driver driver = (Driver) aClass.getDeclaredConstructor().newInstance();
+
+        DriverManager.registerDriver(driver);
+        InputStream inputStream = DriverConnection.class.getClassLoader().getResourceAsStream("application.properties");
+        Properties properties = new Properties();
+        properties.load(inputStream);
+        Connection connection = DriverManager.getConnection(properties.getProperty("jdbcUrl"),properties);
+        System.out.println(connection);
     }
 }
