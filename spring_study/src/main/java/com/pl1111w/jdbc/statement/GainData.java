@@ -50,7 +50,7 @@ public class GainData {
         }
     }
 
-    public Connection getConnection() throws Exception {
+    public static Connection getConnection() throws Exception {
         Class aClass = Class.forName("com.mysql.jdbc.Driver");
         Driver driver = (Driver) aClass.getDeclaredConstructor().newInstance();
 
