@@ -10,7 +10,7 @@ import static com.pl1111w.jdbc.statement.GainData.getConnection;
 
 /**
  * @title: pl1111w
- * @description:
+ * @description: 读未提交会存在脏读  读已提交存在不可重复读  可重复读存在幻读  序列化
  * @author: Kris
  * @date 2022/2/16 14:16
  */
