@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pl1111w.mybatis.mapper.EmployeeMapper">
+    <select id="selectEmp" resultType="com.pl1111w.mybatis.entity.Employee">
+        select * from tbl_employee where id = #{id}
+    </select>
+    <insert id="addEmp">
+        insert tbl_employee (last_name,email) values (#{lastName},#{email})
+    </insert>
+    <insert id="insertEmp" useGeneratedKeys="true" keyProperty="id">
+        insert tbl_employee (last_name,email) values (#{lastName},#{email})
+    </insert>
+    <update id="updateEmployee">
+        update tbl_employee set last_name = #{lastName},email = #{email}
+        where id = #{id}
+    </update>
+    <update id="updateEmp" useGeneratedKeys="true" keyProperty="id">
+        update tbl_employee set last_name = #{lastName},email = #{email}
+        where id = #{id}
+    </update>
+    <delete id="deleteEmp">
+        delete from tbl_employee where id = #{id}
+    </delete>
+    <delete id="deleteEmployment">
+        delete from tbl_employee where last_name = #{lastName}
+    </delete>
+</mapper>
