@@ -26,4 +26,8 @@
     <delete id="deleteEmployment">
         delete from tbl_employee where last_name = #{lastName}
     </delete>
+
+    <select id="selectEmpInfo" resultType="com.pl1111w.mybatis.entity.Employee">
+        select * from ${tableName} where last_name = #{lastName}
+    </select>
 </mapper>

@@ -2,6 +2,8 @@ package com.pl1111w.mybatis.mapper;
 
 import com.pl1111w.mybatis.entity.Employee;
 
+import java.util.Map;
+
 /**
  * @title: pl1111w
  * @description:
@@ -23,4 +25,7 @@ public interface EmployeeMapper {
     boolean deleteEmp(int id);
 
     int deleteEmployment(String name);
+
+    Employee selectEmpInfo(Map<String, String> hashMap);
+
 }

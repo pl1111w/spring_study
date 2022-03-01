@@ -13,6 +13,18 @@ public class Employee {
 
     private int id;
     private String lastName;
-    private char mender;
+    private char gender;
     private String email;
+    private Department department;
+
+
+    public Employee(String lastName, char gender, String email) {
+        this.lastName = lastName;
+        this.gender = gender;
+        this.email = email;
+    }
+
+    public Employee() {
+
+    }
 }
