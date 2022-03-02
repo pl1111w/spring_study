@@ -21,8 +21,13 @@
     <!--        <result column="id" property="department.deptId"></result>-->
     <!--        <result column="dept_name" property="department.deptName"></result>-->
     <!--    </resultMap>-->
+    <sql id="baseInfo">
+       select email,last_name,gender from tbl_employee
+    </sql>
+
     <select id="selectEmp" resultMap="employeeInfo">
-        select * from tbl_employee where id = #{id}
+        <include refid="baseInfo"></include>
+        where id = #{id}
     </select>
 
     <select id="selectEmpLikeName" resultMap="employeeInfo">
