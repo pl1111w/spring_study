@@ -2,6 +2,8 @@ package com.pl1111w.mybatis.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @title: pl1111w
  * @description:
@@ -9,7 +11,7 @@ import lombok.Data;
  * @date 2022/2/23 21:07
  */
 @Data
-public class Employee {
+public class Employee implements Serializable {
 
     private int id;
     private String lastName;

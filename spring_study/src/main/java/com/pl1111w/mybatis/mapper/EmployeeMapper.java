@@ -18,7 +18,7 @@ public interface EmployeeMapper {
 
     boolean addEmp(Employee employee);
 
-    int updateEmp(int id, String name);
+    int updateEmp(Employee employee);
 
     boolean updateEmployee(Employee employee);
 
