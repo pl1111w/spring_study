@@ -2,16 +2,14 @@ package com.pl1111w.jdbc.ConnectonDatabasePool;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.alibaba.druid.pool.DruidPooledConnection;
 import com.pl1111w.jdbc.connection.DriverConnection;
 import org.testng.annotations.Test;
 
-import javax.sql.DataSource;
-import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Field;
-import java.sql.*;
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Properties;
 
 /**
