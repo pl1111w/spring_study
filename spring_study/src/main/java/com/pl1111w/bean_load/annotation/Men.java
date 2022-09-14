@@ -1,7 +1,6 @@
-package com.pl1111w.ioc.annotation;
+package com.pl1111w.bean_load.annotation;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 
 /**
  * @title: pl1111w

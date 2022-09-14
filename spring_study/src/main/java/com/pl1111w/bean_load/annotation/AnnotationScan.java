@@ -1,4 +1,4 @@
-package com.pl1111w.ioc.annotation;
+package com.pl1111w.bean_load.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,10 +21,10 @@ public class AnnotationScan {
     private Women women;
 
     @Autowired//名称注入
-    @Qualifier("hus")
+    @Qualifier("husband")
     private Male male;
 
-    @Resource//类型注入 非spring注解
+    @Resource//名称注入 非spring注解
     private Women women1;
 
     @Resource(name = "men")//名称注入 非spring注解

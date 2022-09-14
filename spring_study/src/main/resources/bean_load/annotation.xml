@@ -7,7 +7,7 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:component-scan base-package="com.pl1111w.ioc.annotation,com.pl1111w.ioc.xml"
+    <context:component-scan base-package="com.pl1111w.bean_load.annotation,com.pl1111w.ioc.xml"
                             use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
     </context:component-scan>
